@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FileUpload.css"
 import axios from "axios";
 const FileUpload = ({ contract, account, provider }) => {
     const [file, setFile] = useState(null);
@@ -6,18 +7,20 @@ const FileUpload = ({ contract, account, provider }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (file) {
+            // console.log(process.env.PINATA_API_KEY)
+            // console.log(process.env.PINATA_SECRET_API_KEY)
             try {
                 const formData = new FormData();
                 formData.append("file", file);
-
                 const resFile = await axios({
                     method: "post",
                     url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
                     data: formData,
                     headers: {
-                        pinata_api_key: `
-                        api_key`,
-                        pinata_secret_api_key: `secret_key`,
+                        // pinata_api_key: `$process.env.PINATA_API_KEY,
+
+                        // pinata_secret_api_key: `${process.env.PINATA_SECRET_API_KEY}`,/
+
                         "Content-Type": "multipart/form-data",
                     },
                 });
@@ -28,6 +31,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 setFile(null);
             } catch (e) {
                 alert("Unable to upload image to Pinata");
+                console.log(e)
             }
         }
         alert("Successfully Image Uploaded");
@@ -59,7 +63,7 @@ const FileUpload = ({ contract, account, provider }) => {
                     onChange={retrieveFile}
                 />
                 <span className="textArea">Image: {fileName}</span>
-                <button type="submit" className="upload" disabled={!file}>
+                <button type="submit" className="border border-red-600" disabled={!file}>
                     Upload File
                 </button>
             </form>
