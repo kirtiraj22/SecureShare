@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,40 +7,34 @@ const Navbar = () => {
       <div className="text-purple-700 text-xl font-bold">SecureShare</div>
       <ul className="flex space-x-6">
         <li className="cursor-pointer">
-          <Link
-            activeClass="active"
+          <NavLink
+            className={(navData) => (navData.isActive ? "active-style" : 'none')}
             to="#home"
-            spy={true}
-            smooth={true}
             offset={-70}
             duration={500}
           >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className="cursor-pointer">
-          <Link
-            activeClass="active"
+          <NavLink
+            className={(navData) => (navData.isActive ? "active-style" : 'none')}
             to="about"
-            spy={true}
-            smooth={true}
             offset={-70}
             duration={500}
           >
             About Us
-          </Link>
+          </NavLink>
         </li>
         <li className="cursor-pointer">
-          <Link
-            activeClass="active"
+          <NavLink
+            className={(navData) => (navData.isActive ? "active-style" : 'none')}
             to="features"
-            spy={true}
-            smooth={true}
             offset={-70}
             duration={500}
           >
             Features
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

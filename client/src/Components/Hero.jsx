@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -19,12 +20,12 @@ const Hero = () => {
                     </p>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <a
+                        <NavLink
                             className="block w-full rounded-lg bg-[#3D00B7] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#f0f1f7f2] border border-[#3D00B7] hover:text-[#3D00B7] focus:outline-none focus:ring active:bg-[red-500] sm:w-auto"
-                            href="/upload"
+                            to="/upload"
                         >
                             Get Started
-                        </a>
+                        </NavLink>
 
                         <a
                             className="block w-full px-12 py-3 text-sm font-medium text-[#3D00B7] shadow border border-[#3D00B7] rounded-lg hover:bg-[#3D00B7] hover:text-white focus:outline-none focus:ring active:text-[#3D00B7] sm:w-auto"
@@ -40,3 +41,6 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+//reference : 1:05:10
