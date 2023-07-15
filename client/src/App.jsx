@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./Components/Home";
+import Upload from "./Pages/Upload";
 import "./index.css";
+import Navbar from "./Components/Navbar";
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center text-red-600">Hello world!</h1>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/upload" element={<Upload />} />
+        </Routes>
+      </Router>
     </>
   )
 }
