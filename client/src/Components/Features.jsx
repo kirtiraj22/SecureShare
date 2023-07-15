@@ -2,10 +2,9 @@ import React from "react";
 
 const Features = () => {
   return (
-    <>
-      <div>Features</div>
-      <div>Features</div>
-    </>
+    <section id="home">
+      features
+    </section>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
         <li className="cursor-pointer">
           <Link
             activeClass="active"
-            to="home"
+            to="#home"
             spy={true}
             smooth={true}
             offset={-70}
@@ -46,5 +46,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
