@@ -4,7 +4,6 @@ const Upload = () => {
   return (
     <>
       <div>Upload</div>
-      <div>Upload</div>
     </>
   );
 };

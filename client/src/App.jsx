@@ -3,6 +3,8 @@ import Home from "./Components/Home";
 import Upload from "./Pages/Upload";
 import "./index.css";
 import Navbar from "./Components/Navbar";
+import About from "./Components/About";
+import Features from "./Components/Features";
 function App() {
 
   return (
@@ -11,6 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+        </Routes>
+        <Routes>
           <Route path="/upload" element={<Upload />} />
         </Routes>
       </Router>
