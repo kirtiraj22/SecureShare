@@ -3,10 +3,8 @@ import Home from "./Components/Home";
 import Upload from "./Pages/Upload";
 import "./index.css";
 import Navbar from "./Components/Navbar";
-import About from "./Components/About";
-import Features from "./Components/Features";
-function App() {
 
+function App() {
   return (
     <>
       <Router>

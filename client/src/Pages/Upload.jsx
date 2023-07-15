@@ -1,9 +1,10 @@
 import React from "react";
+import Main from "./Main";
 
 const Upload = () => {
   return (
     <>
-      <div>Upload</div>
+      <Main />
     </>
   );
 };
