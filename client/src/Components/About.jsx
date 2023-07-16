@@ -6,9 +6,7 @@ const About = () => {
           <div className="w-1/2 flex flex-col justify-center px-3">
             <h1 className="text-4xl font-bold mb-6 text-white">About Us</h1>
             <p className="mb-4 text-white leading-loose">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed finibus elit, et dignissim tellus.
-              Mauris auctor scelerisque neque, vel maximus tellus malesuada eu. Integer tempor sagittis ligula, eget
-              fringilla massa efficitur ut.
+            SecureShare leverages Solidity, React.js, and Firebase to create a platform for storing photos and important documents securely on the Pinata peer-to-peer database. Users can access and interact with the platform using the Metamask wallet.
             </p>
         </div>
         <div className="flex w-25 mr-8">
