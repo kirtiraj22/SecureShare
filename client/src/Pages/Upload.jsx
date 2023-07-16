@@ -3,9 +3,7 @@ import Main from "./Main";
 
 const Upload = () => {
   return (
-    <>
-      <Main />
-    </>
+    <Main />
   );
 };
 
