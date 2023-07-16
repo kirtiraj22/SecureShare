@@ -1,5 +1,14 @@
 # SecureShare
 
+## Contents
+- Summary
+- Problem Statement
+- Project Description
+- Features
+- Tech Stacks
+- Run Locally
+
+
 ## Summary
 
 SecureShare is a secure and decentralized file storing and sharing platform built on the Ethereum blockchain. It provides users with a reliable and private solution to store and share their files while leveraging the power of blockchain technology.
