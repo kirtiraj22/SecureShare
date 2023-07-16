@@ -1,10 +1,40 @@
 # SecureShare
 
-# Getting Started
+## Summary
 
-# Contribution Guidelines
+SecureShare is a secure and decentralized file storing and sharing platform built on the Ethereum blockchain. It provides users with a reliable and private solution to store and share their files while leveraging the power of blockchain technology.
 
-To start contributing, follow the guidelines given below:
+## Problem Statement
+
+Traditional file storing and sharing platforms often lack robust security measures and are susceptible to data breaches and privacy concerns. SecureShare aims to address these issues by offering a decentralized and encrypted solution where users have complete control over their files.
+
+## Project Description
+
+SecureShare allows users to securely store and share their files in a decentralized manner. With end-to-end encryption and decentralized storage, users can be confident that their files are protected and accessible only to authorized individuals.
+The platform provides a user-friendly interface for uploading and managing files. Users can easily grant access to others by specifying their wallet addresses, ensuring secure and controlled file sharing.
+
+SecureShare also emphasizes user control and ownership. By leveraging blockchain technology, users have full control over their files and can easily manage permissions and access rights.
+
+Whether it's for personal or professional use, SecureShare offers a reliable and secure file storage and sharing solution. Say goodbye to centralized platforms and embrace the power of decentralization with SecureShare.
+
+## Features
+
+- Decentralized Storage: Securely store files using the IPFS (InterPlanetary File System) protocol, ensuring data integrity and availability.
+- File Sharing: Share files with others by granting access through wallet addresses, enabling secure and controlled sharing.
+- Data Privacy: Encrypt files to maintain privacy and prevent unauthorized access.
+- Smart Contract Integration: Utilize Ethereum smart contracts to enable secure interactions, access control, and incentivization.
+- Revenue Model: Introduce a cryptocurrency-based revenue model, allowing users to pay for additional storage space or premium features using Ether (ETH) or other tokens.
+
+## Tech Stacks
+
+- Ethereum: Leveraging the Ethereum blockchain for smart contract functionality and secure transactions.
+- IPFS: Utilizing the InterPlanetary File System for decentralized file storage and retrieval.
+- React.js: Building the user interface and front-end components.
+- Hardhat: Developing and testing smart contracts using the Hardhat development environment.
+- Ethers.js: Interacting with Ethereum and smart contracts programmatically.
+- Tailwind CSS: Styling and design framework for creating modern and responsive UI.
+
+## Run Locally
 
 **1.** Fork [this](https://github.com/zkBOYss/SecureShare.git) repository.
 
@@ -20,61 +50,30 @@ git clone https://github.com/<your_user_name>/SecureShare.git
 cd SecureShare
 ```
 
-**4.1** Add a reference (remote) to the original repository.
+**4.** Run Frontend part :
 
 ```
-git remote add upstream
-https://github.com/zkBOYss/SecureShare.git
+cd client
+npm install
+npm run dev
 
 ```
 
-**4.2** Add a reference (remote) to your forked repository
+**5.** Run Backend:
 
 ```
-git remote add origin
-https://github.com/<your_user_name>/SecureShare.git
+cd backend
+npm install --save-dev hardhat
 ```
 
-**5.** Check the remotes for this repository.
+**6.** Run hardhat node in seperate terminal(don't terminate the terminal):
 
 ```
-git remote -v
+    npx hardhat node
 ```
 
-**6.** Always take a pull from the upstream repository to your main branch to keep it updated with the original repository.
+**7.** Deploy locally
 
 ```
-git pull upstream main
+    npx hardhat run --network localhost scripts/deploy.js
 ```
-
-**7.** Always create a new branch.
-
-```
-git checkout -b <your_branch_name>
-```
-
-**8.** Perfom your desired changes to the code base.
-
-**9.** Track your changes.
-
-```
-git add .
-```
-
-**10.** Commit your changes.
-
-```
-git commit -m "commit message"
-```
-
-**11.** Push the committed changes in your feature branch to your remote repo.
-
-```
-git push -u origin <your_branch_name>
-```
-
-**12.** To create a pull request, click on `Compare And Pull Requests`.
-
-**13.** Add appropriate title and description to your pull request explaining what your changes do (with suitable explanation and screenshots).
-
-**14.** Click on `Create Pull Request`.
