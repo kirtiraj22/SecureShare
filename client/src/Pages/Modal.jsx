@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import "./Modal.css"
 const Modal = ({ setModalOpen, contract }) => {
     const sharing = async () => {
         const address = document.querySelector(".address").value;
@@ -30,13 +31,13 @@ const Modal = ({ setModalOpen, contract }) => {
 
                         <input
                             type="text"
-                            className="block mx-auto h-30 w-330 text-center"
+                            className="address block mx-auto h-30 w-330 text-center"
                             placeholder="Enter Address"
                         ></input>
                     </div>
                     <form id="myForm">
                         <select id="selectNumber">
-                            <option className="block mx-auto h-30 w-330 text-center border border-red-500">People With Access</option>
+                            <option className="address block mx-auto h-30 w-330 text-center border border-red-500">People With Access</option>
                         </select>
                     </form>
                     <div className="flex justify-center items-center">

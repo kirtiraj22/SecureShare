@@ -19,7 +19,9 @@ const FileUpload = ({ contract, account, provider }) => {
                     headers: {
                         // pinata_api_key: `$process.env.PINATA_API_KEY,
                         // pinata_secret_api_key: `${process.env.PINATA_SECRET_API_KEY}`,/
-
+                        pinata_api_key: `e9cda620ad87b675aa43`,
+                        pinata_secret_api_key: `ef068eee6df4fe446b8605c213fc2300687fedddce3d59016b38e619bc304040`,
+                        "Content-Type": "multipart/form-data",
                     },
                 });
                 const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
@@ -61,12 +63,12 @@ const FileUpload = ({ contract, account, provider }) => {
                     onChange={retrieveFile}
                 />
                 <span className="textArea">Image: {fileName}</span>
+                <div className="flex items-center justify-center">
+                    <button type="submit" className="my-6 border-2 border-red-500 bg-blue-600 text-white px-2 py-1 rounded-md mr-2 transition-colors duration-300 hover:bg-blue-400 disabled:border-black disabled:bg-gray-300 disabled:text-black" disabled={!file}>
+                        Upload File
+                    </button>
+                </div>
             </form>
-            <div className="flex items-center justify-center">
-                <button type="submit" className="my-6 border-2 border-red-500 bg-blue-600 text-white px-2 py-1 rounded-md mr-2 transition-colors duration-300 hover:bg-blue-400 disabled:border-black disabled:bg-gray-300 disabled:text-black" disabled={!file}>
-                    Upload File
-                </button>
-            </div>
         </div>
     );
 };
